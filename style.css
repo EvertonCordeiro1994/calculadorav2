@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor_fundo_janela: linear-gradient(45deg, black, crimson);
+    --cor_fundo_calculadora: black;
+    /* Botões C BS / */
+    --cor_fundo_botao_cima: grey;
+    --cor_font_botao_cima: black;
+    --cor_fundo_botao_cima_hover: rgb(85, 84, 84);
+    --cor_font_botao_cima_hover: black;
+
+    /* Botões dos numeros */
+    --cor_fundo_botao_numeros: rgb(82, 79, 79);
+    --cor_font_botao_numeros: white;
+    --cor_fundo_botao_numeros_hover: rgb(54, 52, 52);
+    --cor_font_botao_numeros_hover: white;
+
+    /* Botões X - + = */
+    --cor_fundo_botao_lado: orange;
+    --cor_font_botao_lado: white;
+    --cor_fundo_botao_lado_hover: rgb(190, 125, 3);
+    --cor_font_botao_lado_hover: white;
+
+    --cor_fundo_resultado: black;
+    --cor_font_resultado: white;
+
+}
+
+.fundo {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-image: var(--cor_fundo_janela);
+    justify-content: center;
+
+}
+
+
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    position: absolute;
+    width: 420px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: var(--cor_fundo_calculadora);
+}
+
+#resultado {
+    width: 85%;
+    height: 10%;
+    border-radius: 5px;
+    text-align: end;
+    background-color: var(--cor_fundo_resultado);
+    font-size: 50px;
+    margin-top: 60px;
+    color: var(--cor_font_resultado);
+}
+
+table {
+    padding: 10px;
+}
+
+td {
+    padding: 1.5px;
+}
+
+.botao {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 50px;
+    border-radius: 125px;
+    color: var(--cor_font_botao_numeros);
+    background-color: var(--cor_fundo_botao_numeros);
+}
+
+#botaoCima {
+    color: var(--cor_font_botao_cima);
+    background-color: var(--cor_fundo_botao_cima);
+}
+
+#botaoLado,
+#botaoIgual {
+    color: var(--cor_font_botao_lado);
+    background-color: var(--cor_fundo_botao_lado);
+}
+
+#botaoZero {
+    width: 11rem;
+}
+
+#botaoIgual {
+    height: 11rem;
+}
+
+.botao:hover {
+    background-color: var(--cor_fundo_botao_numeros_hover);
+}
+
+#botaoLado:hover {
+    background-color: var(--cor_fundo_botao_lado_hover);
+}
+
+#botaoIgual:hover {
+    background-color: var(--cor_fundo_botao_lado_hover);
+}
+
+#botaoCima:hover {
+    background-color: var(--cor_fundo_botao_cima_hover);
+}
+
+@media(max-width: 400px) {
+    .calculadora {
+        width: 325px;
+        height: 500px;
+    }
+
+    #resultado {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+
+    table {
+        padding: 5px;
+    }
+
+    td {
+        padding: .75px;
+    }
+
+    .botao {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 50px;
+        border-radius: 125px;
+        color: var(--cor_font_botao_numeros);
+        background-color: var(--cor_fundo_botao_numeros);
+    }
+
+    #botaoZero {
+        width: 10rem;
+    }
+
+    #botaoIgual {
+        height: 10rem;
+    }
+}
